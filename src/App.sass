@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+$yellow: #fff159;
+$blue: #3483fa;
+$grey: #aaaaaa;
+$grey-light: #eeeeee;
+$grey-lighter: #fafafa;
+
+// Helpers
+$border-radius: 4px;
+$border-style: 1px solid $grey-light
+
+// Update Bulma's global variables
+$family-sans-serif: 'Montserrat', sans-serif;
+$primary: $blue;
+$warning: $yellow;
+$link: $blue;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $grey-light;
+$control-border-width: .5rem;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Box styling for ItemList
+$box-radius: 0;
+$box-shadow: none;
+$box-link-hover-shadow: none;
+$box-link-active-shadow: none;
+a.box
+  &:hover,
+  &:focus
+    background-color: $grey-lighter;
+.media-content * span.icon
+  padding-left: 1.5rem
+
+// Card styling for Item
+$card-shadow: none;
+.card-footer
+  padding: 1.5rem;
+
+@media screen and (max-width: 768px)
+  .is-flex-mobile
+    flex-direction: column;
+    width: 100%;
+
+// Price tag styling
+.price-tag
+  font-size: 2rem;
+  font-weight: 300;
+  overflow: visible;
+  display: inline-block;
+  vertical-align: text-bottom;
+  line-height: 1rem;
+  margin-bottom: 1rem;
+  & *
+    float: left
+  & &-symbol
+    margin-right: .2rem
+  & &-cents
+    font-size: 1rem;
+    line-height: 1.5;
+    vertical-align: text-bottom;
+    margin-left: .05rem;
+    position: relative;
+    top: -.5rem;
+
+// List styling
+.item-list
+  li
+    &:first-child .box
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+      -webkit-border-top-left-radius: $border-radius;
+      -webkit-border-top-right-radius: $border-radius;
+    &:not(:last-child)
+      border-bottom: $border-style;
+    &:last-child
+      margin-bottom: 1rem;
+      & .box
+        -webkit-border-bottom-left-radius: $border-radius;
+        border-bottom-left-radius: $border-radius;
+        -webkit-border-bottom-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+
+// Breadcrumb styling
+.breadcrumb
+  li + li::before
+    content: none
+
+// Search styling
+$input-focus-border-color: transparent;
+$input-focus-box-shadow-size: 0;
+
+// Section styling
+$section-padding: 4.25rem 1rem;
+
+// Import only what you need from Bulma
+@import '../node_modules/bulma/sass/utilities/_all.sass';
+@import '../node_modules/bulma/sass/base/_all.sass';
+@import '../node_modules/bulma/sass/components/breadcrumb.sass';
+@import '../node_modules/bulma/sass/components/card.sass';
+@import '../node_modules/bulma/sass/components/level.sass';
+@import '../node_modules/bulma/sass/components/media.sass';
+@import '../node_modules/bulma/sass/components/navbar.sass';
+@import '../node_modules/bulma/sass/components/pagination.sass';
+@import '../node_modules/bulma/sass/elements/button.sass';
+@import '../node_modules/bulma/sass/elements/container.sass';
+@import '../node_modules/bulma/sass/elements/content.sass';
+@import '../node_modules/bulma/sass/elements/box.sass';
+@import '../node_modules/bulma/sass/elements/icon.sass';
+@import '../node_modules/bulma/sass/elements/image.sass';
+@import '../node_modules/bulma/sass/elements/title.sass';
+@import '../node_modules/bulma/sass/form/_all.sass';
+@import '../node_modules/bulma/sass/layout/section.sass';

@@ -51,7 +51,7 @@ const Item = ({
 				<div className="card-content">
 					<div className="media is-flex-mobile">
 						<div className="media-left">
-							<figure className="image">
+							<figure className="image is-3by4 is-128x128">
 								<img src={picture} alt="" />
 							</figure>
 						</div>

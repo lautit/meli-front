@@ -3,6 +3,7 @@ import useReactRouter from 'use-react-router';
 
 import useRetrieve from '../hooks/use-retrieve';
 
+const Breadcrumb = React.lazy(() => import('../components/Breadcrumb'));
 const Item = React.lazy(() => import('../components/Item'));
 
 const toRender = {
@@ -23,6 +24,7 @@ const SearchResult = () => {
 		<section className="section">
 			<div className="container">
 				<React.Suspense fallback={<div>Loading...</div>}>
+					<Breadcrumb categories={item.categories} />
 					<Item item={item} />
 				</React.Suspense>
 			</div>
